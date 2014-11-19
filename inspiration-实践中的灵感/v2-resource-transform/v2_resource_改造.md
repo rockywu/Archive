@@ -2,7 +2,7 @@
 
 ### 需求：
 
-** 由于公司是按照日期版本发布生产环境，每天可能发布多个版本，这样导致新法版本无法有效的让浏览器使用到http cache.  **
+** 由于公司是按照日期版本发布生产环境，每天可能发布多个版本，这样导致新发布的版本无法有效的让浏览器使用到http cache.  **
 
 ** 为了提高移动客户端缓存资源利用率，将公共内容做独立资源加载 **
 
@@ -20,8 +20,9 @@
         * resource_decorator_switch //声明是否开启独立装饰器资源.（boolean）（默认为false）
         * resource_type_decorator //声明装饰器资源在路由中定义的类型（默认为 d )
     * 如果添加独立装饰器加载需要route规则做少许更改：
-        * ^/res/[^\/]+/?(b|s|d)/(.*)\.(css|js)$ 需要相应增加类型 d
-    * 装饰器中新增function
+        * 原：^/res/[^\/]+/?(b|s)/(.*)\.(css|js)$
+        * 新：^/res/[^\/]+/?(b|s|d)/(.*)\.(css|js)$  增加类型 d
+    * decorator 中新增function
           
            /**
             * 获取页面的装饰器名
@@ -35,7 +36,7 @@
 ** 2、APF_Resource_JavascriptsAndStylesComponent 中新增decorator资源方法 **
 
     /**
-     * 获取css资源包url
+     * 获取css资源包uri
      */
     public function get_decorator_styles_uri() 
     { 
