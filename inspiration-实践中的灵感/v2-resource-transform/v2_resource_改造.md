@@ -20,8 +20,12 @@
         * resource_decorator_switch //声明是否开启独立装饰器资源.（boolean）（默认为false）
         * resource_type_decorator //声明装饰器资源在路由中定义的类型（默认为 d )
     * 如果添加独立装饰器加载需要route规则做少许更改：
-        * 原：^/res/[^\/]+/?(b|s)/(.*)\.(css|js)$
-        * 新：^/res/[^\/]+/?(b|s|d)/(.*)\.(css|js)$  增加类型 d
+        * 原：
+        
+                ^/res/[^\/]+/?(b|s)/(.*)\.(css|js)$
+        * 新：
+        
+                ^/res/[^\/]+/?(b|s|d)/(.*)\.(css|js)$  //增加类型 d
     * decorator 中新增function
           
            /**
