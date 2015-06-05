@@ -44,6 +44,9 @@
 #### 业务规划设计能力
 
 * 分销项目Spa模式业务设计。
+    * //分销仓库代码
+    
+            http://gitlab.corp.anjuke.com/_xinfang/xinfang-branch/tree/pmt-25708-spa
     * //设计图
     
             http://gitlab.corp.anjuke.com/_xinfang/kfs-design/blob/master/terminal/design/fenxiao/%E5%88%86%E9%94%80SPA.jpg
